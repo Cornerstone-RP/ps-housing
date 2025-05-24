@@ -7,9 +7,9 @@ exports('GetApartments', function() return ApartmentsTable end)
 Config = {}
 
 -- If you're not utilizing ox_lib, it's time to question your approach.
-Config.Target = "qb" -- "ox" or "qb"
-Config.Notify = "qb" -- "ox" or "qb"
-Config.Radial = "qb" -- "ox" or "qb"
+Config.Target = "ox" -- "ox" or "qb"
+Config.Notify = "ox" -- "ox" or "qb"
+Config.Radial = "ox" -- "ox" or "qb"
 Config.Inventory = "qb" -- "ox" or "qb"
 Config.Logs = "qb" -- "qb"
 
@@ -17,7 +17,7 @@ Config.Logs = "qb" -- "qb"
 Config.AccessCanEditFurniture = true
 
 -- Draw the poly for the property
-Config.DebugMode = true
+Config.DebugMode = false
 
 function Debug(...)
     if Config.DebugMode then
@@ -29,7 +29,7 @@ end
 Config.EnableLogs = true
 
 -- Enables Dynamic Doors
-Config.DynamicDoors = false
+Config.DynamicDoors = true
 
 Config.PoliceJobNames = {  -- add multiple police jobs that are allowed to raid properties!
     "police",
@@ -49,6 +49,7 @@ Config.ConsumeRaidItem = false          -- Whether or not to consume the raid it
 -- Set your Real Estate jobs here
 Config.RealtorJobNames = { -- add multiple realestate jobs that are allowed to sell properties!
     "realestate",
+    "realtor",
     -- "realestate2",
     -- "realestate3",
 }
